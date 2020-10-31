@@ -14,13 +14,16 @@ my %WriteMakefileArgs = (
     MIN_PERL_VERSION => '5.006',
     CONFIGURE_REQUIRES => {
         'ExtUtils::MakeMaker' => '0',
-        'Module::Metadata' => '0'
+        'Module::Metadata' => '0',
     },
     TEST_REQUIRES => {
         'Test::More' => '0',
     },
     PREREQ_PM => {
         'warnings::register' => '0',
+        'Carp' => '0',
+	'strict' => '0',
+	'warnings' => '0'
     },
     dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean => { FILES => 'as-*' },
